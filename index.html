@@ -246,6 +246,34 @@ html {
     border-radius: 10px;
 }
 
+	    .menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background: var(--glass-bg);
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem 0;
+    }
+    .nav-links a {
+        display: block;
+        margin: 10px 0;
+    }
+    .menu-toggle {
+        display: block;
+        margin-right: 20px;
+    }
+}
 
         .contact-info i {
             color: var(--highlight-color);
@@ -280,6 +308,7 @@ html {
        button:hover {
            background: var(--primary-color); /* Changes color on hover */
            transform: scale(1.05); /* Slightly enlarges the button */
+       }
        html {
             scroll-behavior: smooth;
        }
@@ -334,6 +363,9 @@ html {
         <a href="#destinations">Destinations</a>
         <a href="#contact">Contact</a>
     </div>
+	<!-- Add this inside .headbar -->
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
 </div>
 
 <!-- Hero Section -->
@@ -553,6 +585,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+</script>
+<script>
+function toggleMenu() {
+    var menu = document.querySelector(".nav-links");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
 </script>
 
 </body>
