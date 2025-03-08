@@ -274,6 +274,37 @@ html {
         margin-right: 20px;
     }
 }
+.formsubmit-credit {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: inherit; /* Matches your website's font */
+    color: var(--text-color, #555); /* Uses your website's text color */
+    background: var(--glass-bg);
+}
+
+.formsubmit-credit a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    transition: color 0.3s ease-in-out;
+}
+
+.formsubmit-credit a:hover {
+    color: var(--primary-color, #007BFF); /* Uses your site's primary color */
+}
+
+.formsubmit-credit img {
+    width: auto;
+    height: 20px;
+    vertical-align: middle;
+    filter: brightness(8); /* Adjusts to match your theme */
+    
+}
 
         .contact-info i {
             color: var(--highlight-color);
@@ -558,6 +589,13 @@ html {
     </div>
 </div>
 
+</div>
+<div class="formsubmit-credit">
+    <a href="https://formsubmit.co/" target="_blank">
+        <img src="images/formsub.png" alt="FormSubmit Logo" width="100px" height="20">
+        Powered by FormSubmit
+    </a>
+</div>
 </div>
 <footer style="
     bottom: 0;
