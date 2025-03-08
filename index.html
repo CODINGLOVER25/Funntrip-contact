@@ -281,6 +281,11 @@ html {
     font-family: inherit; /* Matches your website's font */
     color: var(--text-color, #555); /* Uses your website's text color */
     background: var(--glass-bg);
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .formsubmit-credit a {
@@ -302,9 +307,14 @@ html {
     width: auto;
     height: 20px;
     vertical-align: middle;
-    filter: brightness(8); /* Adjusts to match your theme */  
+    filter: brightness(8); /* Adjusts to match your theme */
+    
 }
-
+@media (max-width: 768px) {
+    .formsubmit-credit {
+        width: 100vw; /* Ensures full width on mobile */
+    }
+}
         .contact-info i {
             color: var(--highlight-color);
             margin-right: 10px;
